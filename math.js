@@ -16,6 +16,9 @@ let scorecard=document.querySelector(".scorecard");
 let restart=document.querySelector(".restart");
 let score=document.querySelector(".score");
 let timerDisplay=document.querySelector(".timer");
+let highScoreDisplay=document.querySelector(".highScore");
+let highScore=JSON.parse(localStorage.getItem("highest"))||"0";
+  highScoreDisplay.innerText=`👑Highest Score:${highScore}`;
 styleSection.style.visibility="hidden";
 mainSection.style.visibility="hidden";
 scorecard.style.visibility="hidden";
@@ -68,6 +71,13 @@ const updateQuestion=(i)=>{
         scorecard.style.visibility="visible";
         score.innerText=`🏆Score :${userScore}`;
         console.log("user's score is ", userScore);
+        if(userScore>highScore){
+            highScore=userScore;
+        localStorage.setItem("highest",JSON.stringify(userScore));
+          highScoreDisplay.innerText=`👑Highest Score:${highScore}`;
+        }
+
+       
     }
     else{
     questionDisplay.innerText=questions[i].Question;
@@ -87,7 +97,6 @@ optionDisplay.forEach((element, index)=> {
         clearInterval(timeoutId);
         if(text.innerText==questions[iteration].answer){
                     userScore++;
-                console.log(userScore);
         }
         optionDisplay.forEach(ele=>{
             ele.style.pointerEvents="none";
@@ -124,7 +133,6 @@ restart.addEventListener("click",(e)=>{
  function updateTimer(){
     let i=60;
  function timer(){
-    console.log(i);
     timerDisplay.innerText=i;
     i--;
  }
@@ -132,7 +140,6 @@ restart.addEventListener("click",(e)=>{
  intervalId = setInterval(timer, 1000);
 timeoutId=setTimeout(() => {
     clearInterval(intervalId);
-    console.log("time end");
     timerDisplay.innerText="⏰Timer Over!"
     optionDisplay.forEach(ele=>{
         ele.style.pointerEvents="none";
