@@ -17,8 +17,13 @@ let restart=document.querySelector(".restart");
 let score=document.querySelector(".score");
 let timerDisplay=document.querySelector(".timer");
 let highScoreDisplay=document.querySelector(".highScore");
+
+
+
 let highScore=JSON.parse(localStorage.getItem("highest"))||"0";
   highScoreDisplay.innerText=`👑Highest Score:${highScore}`;
+
+  
 styleSection.style.visibility="hidden";
 mainSection.style.visibility="hidden";
 scorecard.style.visibility="hidden";
@@ -30,7 +35,9 @@ startBtn.addEventListener("click",(e)=>{
     popUp.style.visibility="hidden";
     updateTimer();
 
-})
+});
+
+
 
 let questions=[{Question:"A train travels 60 km in 1 hour. How far will it travel in 3.5 hours ?",options:["180 km", "210 km" ,"240 km", "200 km"], answer:"210 km"},
 {Question:"Triangle angles are in the ration of 2:3:4. Find all the angles.",options:["40°,60°,80°","30°,60°,90°","20°,40°,120°","45°,45°,90°"],answer:"40°,60°,80°"},
@@ -42,6 +49,7 @@ let questions=[{Question:"A train travels 60 km in 1 hour. How far will it trave
 {Question:"Which shape has the most number of lines of symmetry?",options:["Rectangle","Square","Equilateral Triangle","Circle"],answer:"Circle"},
 {Question:"If Today is Monday, what day will it be after 45 days ?",options:["Wednesday","Thursday","Saturday","Sunday"],answer:"Thursday"},
 {Question:" If all squares are rectangles, and all rectangles are quadrilaterals, then all squares are:",options:["Circles","Quadrilaterals","Rhombuses","Parallelograms"],answer:"Quadrilaterals"}];
+
 
 btn.addEventListener("click",(e)=>{
     iteration++;
@@ -63,6 +71,7 @@ btn.addEventListener("click",(e)=>{
         updateTimer();
     }
 });
+
 
 const updateQuestion=(i)=>{
     if(i>= questions.length){
@@ -115,6 +124,7 @@ optionDisplay.forEach((element, index)=> {
 
 });
 
+
 restart.addEventListener("click",(e)=>{
       e.preventDefault();
       iteration=0;
@@ -127,9 +137,13 @@ restart.addEventListener("click",(e)=>{
        clearInterval(intervalId);
         clearInterval(timeoutId);
         updateTimer();
-})
+});
+
+
  updateQuestion(iteration);
 
+
+ 
  function updateTimer(){
     let i=60;
  function timer(){
