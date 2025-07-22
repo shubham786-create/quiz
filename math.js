@@ -20,7 +20,7 @@ let highScoreDisplay=document.querySelector(".highScore");
 
 
 
-let highScore=JSON.parse(localStorage.getItem("highest"))||"0";
+let highScore=JSON.parse(localStorage.getItem("mathHighest"))||"0";
   highScoreDisplay.innerText=`👑Highest Score:${highScore}`;
 
   
@@ -82,7 +82,7 @@ const updateQuestion=(i)=>{
         console.log("user's score is ", userScore);
         if(userScore>highScore){
             highScore=userScore;
-        localStorage.setItem("highest",JSON.stringify(userScore));
+        localStorage.setItem("mathHighest",JSON.stringify(userScore));
           highScoreDisplay.innerText=`👑Highest Score:${highScore}`;
         }
 
@@ -143,7 +143,7 @@ restart.addEventListener("click",(e)=>{
  updateQuestion(iteration);
 
 
- 
+
  function updateTimer(){
     let i=60;
  function timer(){
