@@ -11,6 +11,7 @@ form.addEventListener("submit",(e)=>{
     let typePass=String((password.value)).trim();
     if(typeName==userId && typePass==userPass){
         window.location.href="home.html";
+        localStorage.setItem("loginId","true");
     }else{
         alert("You don't have any account. Please Sign up!");
 
@@ -18,3 +19,4 @@ form.addEventListener("submit",(e)=>{
     name.value='';
     password.value='';
 });
+

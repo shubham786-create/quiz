@@ -19,6 +19,7 @@ form.addEventListener("submit",(e)=>{
         alert("User exists ,please log in !");
        }else{
        window.location.href="home.html";
+       localStorage.setItem("loginId","true");
        checkTime();
        }
         name.value='';

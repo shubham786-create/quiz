@@ -25,11 +25,11 @@
       <div class="hidden md:block w-30 h-30 bg-violet-700 rounded-full absolute  left-20 top-50"></div>
      <div class="hidden md:block w-30 h-30 bg-violet-700 rounded-full absolute  right-20 top-50"></div> 
     </section >
-    <section class="relative -top-40 w-full z-300 center ">
+    <section class="main relative  -top-45 w-full z-300 center ">
         <div class="w-[80%] md:w-[50%] center shadow-2xl shadow-gray-500  bg-white rounded-2xl">
             <h1 class="text-center text-3xl border-2 m-2 p-2 text-white rounded-3xl bg-violet-800 " >PROFILE</h1>
         <div>
-            <div class="w-32 h-32 rounded-full overflow-hidden flex flw-col bg-violet-800"> <img src="avataaars.png" class="w-32 h-32" id="profile"/></div>
+            <div class="w-32 h-32 rounded-full overflow-hidden flex flw-col bg-violet-800"> <img src="avataaars.png" class=" profile w-32 h-32" /></div>
            <div class=" m-2 center"> <input type="file" id="fileId" accept="image/*" class="border-2 w-23 p-1 rounded-2xl bg-violet-800 text-white"/></div>
         </div>
         <div class=" w-full p-5 md:text-2xl overflow-x-auto flex flex-nowrap  flex-col overflow-hidden gap-2">
@@ -40,6 +40,24 @@
         <div class="flex m-4 justify-center gap-2 w-full flex-wrap">
             <div class=" p-2 bg-violet-800 rounded-2xl text-white" id="edit">Edit Profile</div>
             <div class=" p-2 bg-violet-800 rounded-2xl text-white" id="logout">Log out</div>
+        </div>
+        </div>
+    </section>
+        <section class="editSection relative -top-45 w-full z-300 center ">
+        <div class="w-[80%] md:w-[50%] center shadow-2xl shadow-gray-500  bg-white rounded-2xl">
+            <h1 class="text-center text-3xl border-2 m-2 p-2 text-white rounded-3xl bg-violet-800 " >PROFILE</h1>
+        <div>
+            <div class="w-32 h-32 rounded-full overflow-hidden flex flw-col bg-violet-800"> <img src="avataaars.png" class="profile w-32 h-32"/></div>
+           <div class=" m-2 center w-fit p-2 bg-violet-800 rounded-2xl text-white" id="remove">Remove picture</div>
+        </div>
+        <div class=" w-full p-5 md:text-2xl overflow-x-auto flex flex-nowrap  flex-col overflow-hidden gap-2">
+           <label for="editName">Name:</label>
+           <input type="text" placeholder="shubham pandey" id="editName" class="border-2 h-10 rounded-2xl p-1"/>
+           <label for="editMail">Email:</label>
+           <input type="text" placeholder="xyz@gmail.com" id="editMail" class="border-2 h-10 rounded-2xl p-1"/>
+        </div>
+        <div class="flex m-4 justify-center gap-2 w-full flex-wrap">
+            <div class=" p-2 w-16 text-center bg-violet-800 rounded-2xl text-white" id="save">Save</div>
         </div>
         </div>
     </section>

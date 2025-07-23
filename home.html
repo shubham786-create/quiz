@@ -81,21 +81,21 @@
            
         </div>
              <div class="box-Decor">
-             <a href="english.html" class="center-H">
+             <a href="general.html" class="center-H">
                 <img class="w-15" src="https://cdn-icons-png.flaticon.com/128/12282/12282489.png"/>
                 <span>GENERAL</span>
              </a>   
            
         </div>
                     <div class="box-Decor">
-             <a href="english.html" class="center-H">
+             <a href="science.html" class="center-H">
                 <img class="w-15" src="https://cdn-icons-png.flaticon.com/128/12300/12300011.png"/>
                 <span>SCIENCE</span>
              </a>   
            
         </div>
                     <div class="box-Decor">
-             <a href="english.html" class="center-H">
+             <a href="fun.html" class="center-H">
                 <img class="w-15" src="https://cdn-icons-png.flaticon.com/128/2058/2058208.png"/>
                 <span>ENTERTAINMENT</span>
              </a>   
@@ -128,5 +128,13 @@
             </a>
         </div>
     </footer>
+    <script>
+        window.addEventListener("load",(e)=>{
+            let loginPass=localStorage.getItem("loginId");
+            if(loginPass!="true"){
+                window.location.href="login.html";
+            }
+        })
+    </script>
 </body>
 </html>
