@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body >
+        <section class="bg-violet-800 gap-1.5 w-full h-[60vh] rounded-b-3xl center">
+      <div class="w-14 h-14 md:w-20 md:h-20 bg-violet-700 rounded-full absolute top-4 left-4"></div>
+      <div class="w-14 h-14 md:w-20 md:h-20 bg-violet-700 rounded-full absolute  top-65 right-4"></div>
+      <div class="hidden md:block w-30 h-30 bg-violet-700 rounded-full absolute  left-20 top-50"></div>
+     <div class="hidden md:block w-30 h-30 bg-violet-700 rounded-full absolute  right-20 top-50"></div> 
+    </section >
+    <section class="absolute top-[15%] mb-5 w-full center z-100">
+        <div class="center bg-white rounded-2xl shadow-gray-800 shadow-2xl w-[80%] md:w-[50%] gap-5">
+            <h1 class="text-4xl font-bold border-b-2 p-2 ">Sign up</h1>
+            <form id="formId" class="flex flex-col gap-2 mt-5 w-full">
+            <label class=" text-xl ml-5" for="name">Name:</label>
+            <input type="text" class="name border-1 h-12 ml-5 w-[80%] rounded-3xl p-1 shadow-2xl shadow-gray-800 focus:bg-violet-800 focus:text-white focus:border-white" name="text" id="name" required="required" placeholder="shubham pandey">
+            <label for="password" class="text-xl mt-8 ml-5">Email:</label>
+            <input type="email" class="mail border-1 h-12 ml-5 w-[80%] rounded-3xl shadow-2xl p-1  shadow-gray-800 focus:bg-violet-800 focus:text-white focus:border-white" name="text" id="email" required="required" placeholder="xyz@gmail.com">
+            <label for="password" class=" text-xl mt-8 ml-5">Password:</label>
+            <input type="text" class=" pass border-1 h-12 ml-5 w-[80%] rounded-3xl shadow-2xl p-1 mb-8 shadow-gray-800 focus:bg-violet-800 focus:text-white focus:border-white" name="text" id="password" required="required" placeholder="password..">
+            <button href="home.html" type="submit" class="border-2 w-38 mx-auto p-1 mb-5 rounded-4xl bg-violet-800 text-white ">Submit</button> 
+        </form>
+        <div class="mb-2">Already have an account ?<a href="login.html" class="text-blue-700 font-bold">Log in</a></div>
+        </div>
+    </section>
+    <script src="signup.js"></script>
+</body>
+</html>
