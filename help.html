@@ -6,11 +6,82 @@
     <title>Document</title>
     <link href="style.css" rel="stylesheet"/>
 </head>
-<body class="h-screen flex flex-col items-center justify-center">
-    <section class="w-[80%] md:w-[50%] border-2 h-[50%] bg-violet-800 text-white text-xl md:text-2xl center rounded-2xl shadow-2xl shadow-gray-500">
-        <div>It will be available soon !</div>
-        <div>Stay tuned !</div>
+<body class="bg-violet-800 text-white">
+    <section class=" flex flex-row justify-center items-center">
+      <div class="border-8 w-fit rounded-full border-violet-600">
+        <div class="border-8 w-fit rounded-full border-violet-300">
+            <div class="border-4 w-20 h-20 rounded-full center bg-white">
+                <div class="text-6xl text-black">?</div>
+            </div>
+        </div>
+      </div>
+      <div class="p-2 text-2xl md:text-3xl">Quiz Help Desk</div>
     </section>
-    <div class="border-2 p-2 text-2xl w-24 text-center m-10 text-white rounded-2xl bg-violet-800"><a href="home.html">Back</a></div>
+    <section class="mt-5 md:text-center md:text-2xl">
+        <h1 class="text-center text-2xl md:text-3xl w-fit border-b-2 p-2 mx-auto">How to play ?</h1>
+        <div class="m-3 text-xl">There are five subjects including Maths , English , General Knowledge , Science and Entertainment , you can play a quiz on.  </div>
+        <div class=" md:hidden w-fit center border-2 mx-auto bg-white rounded-2xl "><img src="home.png" class="w-50 p-2 md:hidden"/></div>
+        <div class="hidden md:block w-[45%] border-2 mx-auto bg-white rounded-2xl"><img src="home2.png" class="w-full p-2 hidden md:block"/></div>
+        <div class="m-3 text-xl">Click on the "Start Quiz" button.</div>
+        <div class="md:hidden w-fit center border-2 mx-auto bg-white rounded-2xl  "><img src="start1.png" class="w-50 p-2 md:hidden"/></div>
+         <div class="hidden md:block w-[40%] border-2 mx-auto bg-white rounded-2xl"><img src="start2.png" class="w-full p-2 hidden md:block"/></div>
+        <div class="text-xl m-3">There are ten questions for each subjects.Each questions must be answered within 60 seconds.</div>
+        <div class="text-xl m-3">Every question gives you one point.Each has four options.</div>
+         <div class="w-fit center border-2 mx-auto bg-white rounded-2xl md:hidden "><img src="correct.png" class="w-50 p-2 md:hidden"/></div>
+          <div class="hidden md:block w-[50%] border-2 mx-auto bg-white rounded-2xl"><img src="correct2.png" class="w-full p-2 hidden md:block"/></div>
+          <div class="text-xl m-3">If the correct option has been clicked it becomes "green", on incorrect it gets "red".</div>
+         <div class=" w-fit md:hidden center border-2 mx-auto bg-white rounded-2xl mt-2 "><img src="wrong.png" class="w-50 p-2 md:hidden"/></div>
+          <div class="hidden md:block w-[50%] border-2 mx-auto bg-white rounded-2xl"><img src="wrong2.png" class="w-full p-2 hidden md:block"/></div>
+        <div><img/></div>
+        <h1 class="text-center text-2xl w-fit border-b-2 p-2 mx-auto md:text-3xl">Quiz Rules :</h1>
+        <div class="m-3 text-xl" >Player will be provided only single attempt.</div>
+        <div class="m-3 text-xl">No question will be skipped or revisited. player will have to restart the quiz if he/she wants to replay.</div>
+        <div class="m-3 text-xl">Quiz can not be paused . All the questions are determined to be solved within one minute.</div>
+        <h1 class="text-center text-2xl w-fit border-b-2 p-2 mx-auto md:text-3xl">Login Requirements:</h1>
+        <div class="m-3 text-xl">Players need to sign in to take the quiz.</div>
+        <div class="m-3 text-xl">All their "highest score" in each quiz will be saved to their profile.</div>
+        <h1 class="text-center text-2xl w-fit border-b-2 p-2 mx-auto md:text-3xl">Device Compatibility:</h1>
+        <div class="m-3 text-xl">It works approximately on every browser.</div>
+        <div class="m-3 text-xl">Mobile and desktop support.</div>
+        <h1 class="text-center text-2xl w-fit border-b-2 p-2 mx-auto md:text-3xl">Technical Support:</h1>
+        <div class="m-3 text-xl">If the quiz does not load , try refreshing the page.</div>
+        <div class="m-3 text-xl">Make sure JavaScript is enabled.</div>
+        <div class="m-3 text-xl text-center">For contact or feedback:</div>
+       <div class="m-3 text-xl text-center"> <a href="mailto:pandeyshubham0475@gmail.com">📩:QuizSupport@gmail.com</a></div>
+    </section>
+        <footer class="flex h-20 flex-row justify-around text-center text-black sticky bottom-0 bg-gray-100  mt-5">
+        <div>
+            <a href="home.html" class="foot">
+                <img src="https://cdn-icons-png.flaticon.com/128/1946/1946488.png" class="w-5 md:w-10"/>
+                <span>Home</span>
+            </a>
+        </div>
+         <div>
+            <a href="result.html" class="foot">
+                <img src="https://cdn-icons-png.flaticon.com/128/1250/1250673.png" class="w-5 md:w-10"/>
+                <span>Result</span>
+            </a>
+        </div>
+         <div>
+            <a href="help.html" class="foot">
+                <img src="https://cdn-icons-png.flaticon.com/128/3249/3249904.png" class="w-5 md:w-10"/>
+                <span>Help</span>
+            </a>
+        </div>
+         <div>
+            <a href="profile.html" class="foot">
+                <img src="https://cdn-icons-png.flaticon.com/128/1144/1144760.png" class="w-5 md:w-10"/>
+                <span>Profile</span>
+            </a>
+        </div>
+    </footer>
+    <script>
+        window.addEventListener("load",(e)=>{
+            let loginPass=localStorage.getItem("loginId");
+            if(loginPass!="true"){
+                window.location.href="login.html";
+            }
+        });
+    </script>
 </body>
 </html>

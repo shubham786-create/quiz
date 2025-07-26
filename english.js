@@ -46,8 +46,8 @@ The scientist’s theory was purely ______ and lacked practical application.`,op
 {Question:"Which of these idioms means “to reveal a secret”?",options:["Bite the bullet","Spill the beans","Barking up the wrong tree","Pull someone's leg"],answer:"Spill the beans"},
 {Question:`What tone does the following sentence convey?
 “Well, that is just fantastic,” she muttered, staring at her ruined project.`,options:["Joyful","Sarcastic","Confident","Indifferent"],answer:"Sarcastic"},
-{Question:"The word 'obsequious' refers to someone who is:",options:["Disobedeint","EXtremely obedient","Angry","Smart"],answer:"Extremely Obedient"},
-{Question:"Which sentence contains an error in subject-verb agreement?",options:["Each of the players runs fast.","The committee has made its decision."," Neither of the options are good"," The dog with the puppies is barking"],answer:" Neither of the options are good"},
+{Question:"The word 'obsequious' refers to someone who is:",options:["Disobedeint","Extremely obedient","Angry","Smart"],answer:"Extremely obedient"},
+{Question:"Which sentence contains an error in subject-verb agreement?",options:["Each of the players runs fast.","The committee has made its decision.","Neither of the options are good"," The dog with the puppies is barking"],answer:"Neither of the options are good"},
 {Question:`Choose the word that means “harsh in tone or manner”:`,options:["Acrimonious","Placid","Mellow","Jovial"],answer:"Acrimonious"},
 {Question:`His obfuscating explanations only made the topic harder to understand. What does "obfuscating" mean?`,options:["Clarifying","Simplifying","Confusing","Strengthening"],answer:"Confusing"},
 {Question:"Choose the correct synonym of 'nefarious':",options:["Kind","Evil","Silly","Lazy"],answer:"Evil"}];
