@@ -6,11 +6,80 @@
     <title>Document</title>
     <link href="style.css" rel="stylesheet"/>
 </head>
-<body class="h-screen flex flex-col items-center justify-center">
-    <section class="w-[80%] md:w-[50%] border-2 h-[50%] bg-violet-800 text-white text-xl md:text-2xl center rounded-2xl shadow-2xl shadow-gray-500">
-        <div>It will be available soon !</div>
-        <div>Stay tuned !</div>
+<body>
+        <section class="stylesec bg-violet-800 gap-1.5 w-full h-[60vh] rounded-b-3xl ">
+        <div class="bg-violet-500 w-45 h-45 center rounded-full ml-5">
+            <div class="bg-violet-300 w-40 h-40 center rounded-full">
+        <div class="bg-white w-36 h-36 center rounded-full">
+            <img src="https://cdn-icons-png.flaticon.com/128/5405/5405264.png" class="w-24"/>
+      </div>
+      </div>
+      </div>
+      <div class="w-14 h-14 md:w-20 md:h-20 bg-violet-700 rounded-full absolute left-5"></div>
+      <div class="w-14 h-14 md:w-20 md:h-20 bg-violet-700 rounded-full absolute  top-65 right-4"></div>
+      <div class="hidden md:block w-30 h-30 bg-violet-700 rounded-full absolute  left-20 top-50"></div>
+     <div class="hidden md:block w-30 h-30 bg-violet-700 rounded-full absolute  right-20 top-50"></div> 
+    </section >
+    <section class="main  relative -top-30 w-full flex flex-col gap-10 items-center h-fit ">
+        <div class="w-[80%] md:w-[50%] min-h-50 md:min-h-60 rounded-2xl shadow-gray-500 flex flex-col justify-between items-center bg-white shadow-2xl md:text-xl">
+            <h1 class="serial"></h1>
+            <div class="question p-2"></div>
+            <div class="timer min-w-10 p-1 m-0.5 text-white rounded-full bg-violet-800 min-h-10 center"></div>
+        </div>
+        <div class="min-w-[80%]  md:min-w-[50%] flex flex-col gap-4">
+        <p class="option btn"></p>
+        <p class="option btn"></p>
+        <p class="option btn"></p>
+        <p class="option btn"></p>
+        </div>
+        <button class=" mainBtn border-2 h-12 w-[40%] text-white bg-violet-800 md:text-xl mt-5 mx-auto rounded-3xl">Next</button>
     </section>
-    <div class="border-2 p-2 text-2xl w-24 text-center m-10 text-white rounded-2xl bg-violet-800"><a href="home.html">Back</a></div>
+    <section class="pop-up h-[50%] absolute top-[10%]  w-full flex flex-col justify-center items-center">
+        <div class="flex w-[80%] md:w-[50%] bg-violet-800 h-full flex-col rounded-2xl text-white items-center justify-around ">
+            <div class="border w-20 h-20 center rounded-full bg-violet-500">
+                <img class="w-16" src="https://cdn-icons-png.flaticon.com/128/5405/5405264.png"/>
+            </div>
+            <div class="text-3xl">⚠️Alert !</div>
+            <button class="start cursor-pointer text-2xl border-1 p-2 rounded-2xl bg-violet-600 m-5">Start Quiz</button>
+            </div>
+    </section>
+      <section class="scorecard h-[50%] absolute top-[20%]  w-full flex flex-col justify-center items-center">
+        <div class="flex w-[80%] md:w-[50%] bg-violet-800 h-full flex-col rounded-2xl text-white items-center justify-around ">
+            <div class="border w-20 h-20 center rounded-full bg-violet-500">
+                <img class="w-16" src="https://cdn-icons-png.flaticon.com/128/5405/5405264.png"/>
+            </div>
+            <div class="text-3xl">Quiz Finished!</div>
+            <div class="score text-2xl"></div>
+            <div class=" highScore text-2xl"></div>
+            <button class="restart cursor-pointer text-2xl border-1 p-2 rounded-2xl bg-violet-600 m-5">Restart</button>
+            </div>
+    </section>
+    <footer class="flex flex-row justify-around text-center sticky bottom-0  bg-gray-100 h-20 ">
+        <div>
+            <a href="home.html" class="foot">
+                <img src="https://cdn-icons-png.flaticon.com/128/1946/1946488.png" class="w-5 md:w-10"/>
+                <span>Home</span>
+            </a>
+        </div>
+         <div>
+            <a href="result.html" class="foot">
+                <img src="https://cdn-icons-png.flaticon.com/128/1250/1250673.png" class="w-5 md:w-10"/>
+                <span>Result</span>
+            </a>
+        </div>
+         <div>
+            <a href="help.html" class="foot">
+                <img src="https://cdn-icons-png.flaticon.com/128/3249/3249904.png" class="w-5 md:w-10"/>
+                <span>Help</span>
+            </a>
+        </div>
+         <div>
+            <a href="profile.html" class="foot">
+                <img src="https://cdn-icons-png.flaticon.com/128/1144/1144760.png" class="w-5 md:w-10"/>
+                <span>Profile</span>
+            </a>
+        </div>
+    </footer>
+     <script src="fun.js"></script>
 </body>
 </html>

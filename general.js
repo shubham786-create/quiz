@@ -20,7 +20,7 @@ let highScoreDisplay=document.querySelector(".highScore");
 
 
 
-let highScore=JSON.parse(localStorage.getItem("mathHighest"))||"0";
+let highScore=JSON.parse(localStorage.getItem("genHigest"))||"0";
   highScoreDisplay.innerText=`👑Highest Score:${highScore}`;
 
   
@@ -39,16 +39,58 @@ startBtn.addEventListener("click",(e)=>{
 
 
 
-let questions=[{Question:"A train travels 60 km in 1 hour. How far will it travel in 3.5 hours ?",options:["180 km", "210 km" ,"240 km", "200 km"], answer:"210 km"},
-{Question:"Triangle angles are in the ration of 2:3:4. Find all the angles.",options:["40°,60°,80°","30°,60°,90°","20°,40°,120°","45°,45°,90°"],answer:"40°,60°,80°"},
-{Question:"If A and B are events with P(A) = 0.5 and P(B) = 0.7, and they are independent, what is P(A ∩ B)?",options:["0.2","1.2","0.35","0.5"],answer:"0.35"},
-{Question:"Number of zeros at the end of 100!",options:["20","24","22","25"],answer:"24"},
-{Question:" If John's age is twice that of his sister and the sum of their ages is 36, what is John's age?",options:["10","24","18","20"],answer:"24"},
-{Question:"A man walks 10 km south, then 10 km west, then 10 km north. How far is he from the starting point?",options:["10 Km","30 Km","20 Km","0 Km"],answer:"10 Km"},
-{Question:" Which number is one-fourth of one-third of one-half of 240?",options:["20","10","30","40"],answer:"10"},
-{Question:"Which shape has the most number of lines of symmetry?",options:["Rectangle","Square","Equilateral Triangle","Circle"],answer:"Circle"},
-{Question:"If Today is Monday, what day will it be after 45 days ?",options:["Wednesday","Thursday","Saturday","Sunday"],answer:"Thursday"},
-{Question:" If all squares are rectangles, and all rectangles are quadrilaterals, then all squares are:",options:["Circles","Quadrilaterals","Rhombuses","Parallelograms"],answer:"Quadrilaterals"}];
+let questions = [
+  {
+    Question: "Which Nobel laureate developed the concept of “bounded rationality” in economics?",
+    options: ["Amartya Sen", "Daniel Kahneman", "Herbert Simon", "Milton Friedman"],
+    answer: "Herbert Simon"
+  },
+  {
+    Question: "Which element has the lowest melting point?",
+    options: ["Helium", "Hydrogen", "Nitrogen", "Neon"],
+    answer: "Helium"
+  },
+  {
+    Question: "In which year did the Berlin Wall fall?",
+    options: ["1987", "1989", "1990", "1991"],
+    answer: "1989"
+  },
+  {
+    Question: "Who was the first woman to win a Nobel Prize in two different sciences?",
+    options: ["Dorothy Hodgkin", "Marie Curie", "Rosalind Franklin", "Ada Lovelace"],
+    answer: "Marie Curie"
+  },
+  {
+    Question: "Which Indian classical dance form originated in Kerala?",
+    options: ["Kathak", "Bharatanatyam", "Kathakali", "Odissi"],
+    answer: "Kathakali"
+  },
+  {
+    Question: "What is the SI unit of luminous flux?",
+    options: ["Lumen", "Lux", "Candela", "Watt"],
+    answer: "Lumen"
+  },
+  {
+    Question: "Which Mughal emperor built the Buland Darwaza?",
+    options: ["Akbar", "Shah Jahan", "Babur", "Aurangzeb"],
+    answer: "Akbar"
+  },
+  {
+    Question: "What is the main function of ribosomes in a cell?",
+    options: ["Energy production", "Protein synthesis", "Lipid transport", "DNA replication"],
+    answer: "Protein synthesis"
+  },
+  {
+    Question: "Which city hosted the first modern Olympic Games?",
+    options: ["Rome", "Athens", "London", "Paris"],
+    answer: "Athens"
+  },
+  {
+    Question: "Which African country has never been colonized?",
+    options: ["Ghana", "Ethiopia", "Kenya", "Algeria"],
+    answer: "Ethiopia"
+  }
+];
 
 
 btn.addEventListener("click",(e)=>{
@@ -82,7 +124,7 @@ const updateQuestion=(i)=>{
         console.log("user's score is ", userScore);
         if(userScore>highScore){
             highScore=userScore;
-        localStorage.setItem("mathHighest",JSON.stringify(userScore));
+        localStorage.setItem("genHighest",JSON.stringify(userScore));
           highScoreDisplay.innerText=`👑Highest Score:${highScore}`;
         }
 

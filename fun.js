@@ -20,7 +20,7 @@ let highScoreDisplay=document.querySelector(".highScore");
 
 
 
-let highScore=JSON.parse(localStorage.getItem("mathHighest"))||"0";
+let highScore=JSON.parse(localStorage.getItem("funHigest"))||"0";
   highScoreDisplay.innerText=`👑Highest Score:${highScore}`;
 
   
@@ -38,17 +38,65 @@ startBtn.addEventListener("click",(e)=>{
 });
 
 
+let questions = [
+  {
+    Question: "Which Bollywood actor is known as the 'Khiladi' of Bollywood?",
+    options: ["Shah Rukh Khan", "Aamir Khan", "Akshay Kumar", "Salman Khan"],
+    answer: "Akshay Kumar"
+  },
+  {
+    Question: "In the movie '3 Idiots', what is Rancho’s real name?",
+    options: ["Ranchoddas Shamaldas Chanchad", "Raju Rastogi", "Farhan Qureshi", "Phunsukh Wangdu"],
+    answer: "Phunsukh Wangdu"
+  },
+  {
+    Question: "Which Bollywood film features the song 'All is Well'?",
+    options: ["PK", "3 Idiots", "Chhichhore", "Dangal"],
+    answer: "3 Idiots"
+  },
+  {
+    Question: "Who played the role of 'Mogambo' in the film 'Mr. India'?",
+    options: ["Amrish Puri", "Prem Chopra", "Anupam Kher", "Danny Denzongpa"],
+    answer: "Amrish Puri"
+  },
+  {
+    Question: "In which movie does the dialogue 'Tumse na ho payega' appear?",
+    options: ["Gully Boy", "Tamasha", "Chhichhore", "Bhaag Milkha Bhaag"],
+    answer: "Chhichhore"
+  },
+  {
+    Question: "Which Bollywood actor is famous for his dance moves and has the nickname 'Greek God of Bollywood'?",
+    options: ["Tiger Shroff", "Ranbir Kapoor", "Hrithik Roshan", "Varun Dhawan"],
+    answer: "Hrithik Roshan"
+  },
+  {
+    Question: "What was the name of the virus in 'Munna Bhai M.B.B.S.'?",
+    options: ["Dr. Asthana", "Circuit", "Zafar Bhai", "Khujli Bhai"],
+    answer: "Dr. Asthana"
+  },
+  {
+    Question: "Which film features a gangster named 'Chhedi Singh'?",
+    options: ["Singham", "Dabangg", "Rowdy Rathore", "Wanted"],
+    answer: "Dabangg"
+  },
+  {
+    Question: "What is the full form of 'DDLJ'?",
+    options: [
+      "Dilwale Dil Le Jayenge",
+      "Dilwale Dulhania Le Jayenge",
+      "Dilwale Dulhan Le Jayenge",
+      "Dilwale Duniya Le Jayenge"
+    ],
+    answer: "Dilwale Dulhania Le Jayenge"
+  },
+  {
+    Question: "Which actress is known for the iconic dialogue 'Thappad se darr nahi lagta sahab, pyaar se lagta hai'?",
+    options: ["Deepika Padukone", "Kareena Kapoor", "Katrina Kaif", "Sonakshi Sinha"],
+    answer: "Sonakshi Sinha"
+  }
+];
 
-let questions=[{Question:"A train travels 60 km in 1 hour. How far will it travel in 3.5 hours ?",options:["180 km", "210 km" ,"240 km", "200 km"], answer:"210 km"},
-{Question:"Triangle angles are in the ration of 2:3:4. Find all the angles.",options:["40°,60°,80°","30°,60°,90°","20°,40°,120°","45°,45°,90°"],answer:"40°,60°,80°"},
-{Question:"If A and B are events with P(A) = 0.5 and P(B) = 0.7, and they are independent, what is P(A ∩ B)?",options:["0.2","1.2","0.35","0.5"],answer:"0.35"},
-{Question:"Number of zeros at the end of 100!",options:["20","24","22","25"],answer:"24"},
-{Question:" If John's age is twice that of his sister and the sum of their ages is 36, what is John's age?",options:["10","24","18","20"],answer:"24"},
-{Question:"A man walks 10 km south, then 10 km west, then 10 km north. How far is he from the starting point?",options:["10 Km","30 Km","20 Km","0 Km"],answer:"10 Km"},
-{Question:" Which number is one-fourth of one-third of one-half of 240?",options:["20","10","30","40"],answer:"10"},
-{Question:"Which shape has the most number of lines of symmetry?",options:["Rectangle","Square","Equilateral Triangle","Circle"],answer:"Circle"},
-{Question:"If Today is Monday, what day will it be after 45 days ?",options:["Wednesday","Thursday","Saturday","Sunday"],answer:"Thursday"},
-{Question:" If all squares are rectangles, and all rectangles are quadrilaterals, then all squares are:",options:["Circles","Quadrilaterals","Rhombuses","Parallelograms"],answer:"Quadrilaterals"}];
+
 
 
 btn.addEventListener("click",(e)=>{
@@ -82,7 +130,7 @@ const updateQuestion=(i)=>{
         console.log("user's score is ", userScore);
         if(userScore>highScore){
             highScore=userScore;
-        localStorage.setItem("mathHighest",JSON.stringify(userScore));
+        localStorage.setItem("funHighest",JSON.stringify(userScore));
           highScoreDisplay.innerText=`👑Highest Score:${highScore}`;
         }
 
@@ -160,7 +208,6 @@ timeoutId=setTimeout(() => {
     });
 }, 60000);
  }
-
          window.addEventListener("load",(e)=>{
             let loginPass=localStorage.getItem("loginId");
             if(loginPass!="true"){

@@ -20,7 +20,7 @@ let highScoreDisplay=document.querySelector(".highScore");
 
 
 
-let highScore=JSON.parse(localStorage.getItem("mathHighest"))||"0";
+let highScore=JSON.parse(localStorage.getItem("engHighet"))||"0";
   highScoreDisplay.innerText=`👑Highest Score:${highScore}`;
 
   
@@ -39,16 +39,18 @@ startBtn.addEventListener("click",(e)=>{
 
 
 
-let questions=[{Question:"A train travels 60 km in 1 hour. How far will it travel in 3.5 hours ?",options:["180 km", "210 km" ,"240 km", "200 km"], answer:"210 km"},
-{Question:"Triangle angles are in the ration of 2:3:4. Find all the angles.",options:["40°,60°,80°","30°,60°,90°","20°,40°,120°","45°,45°,90°"],answer:"40°,60°,80°"},
-{Question:"If A and B are events with P(A) = 0.5 and P(B) = 0.7, and they are independent, what is P(A ∩ B)?",options:["0.2","1.2","0.35","0.5"],answer:"0.35"},
-{Question:"Number of zeros at the end of 100!",options:["20","24","22","25"],answer:"24"},
-{Question:" If John's age is twice that of his sister and the sum of their ages is 36, what is John's age?",options:["10","24","18","20"],answer:"24"},
-{Question:"A man walks 10 km south, then 10 km west, then 10 km north. How far is he from the starting point?",options:["10 Km","30 Km","20 Km","0 Km"],answer:"10 Km"},
-{Question:" Which number is one-fourth of one-third of one-half of 240?",options:["20","10","30","40"],answer:"10"},
-{Question:"Which shape has the most number of lines of symmetry?",options:["Rectangle","Square","Equilateral Triangle","Circle"],answer:"Circle"},
-{Question:"If Today is Monday, what day will it be after 45 days ?",options:["Wednesday","Thursday","Saturday","Sunday"],answer:"Thursday"},
-{Question:" If all squares are rectangles, and all rectangles are quadrilaterals, then all squares are:",options:["Circles","Quadrilaterals","Rhombuses","Parallelograms"],answer:"Quadrilaterals"}];
+let questions=[{Question:"What is the meaning of the word 'obfuscate'?",options:["Clarify", "Hide" ,"Encourage", "Confuse"], answer:"Confuse"},
+{Question:`Which word best fits in the blank?
+The scientist’s theory was purely ______ and lacked practical application.`,options:["empirical","hypothetical","conclusive","tactile"],answer:"hypothetical"},
+{Question:"What does the idiom 'beat around the bush' mean?",options:["To hit something","To speak indirectly","To tell lies","To forget something"],answer:"To speak indirectly"},
+{Question:"Which of these idioms means “to reveal a secret”?",options:["Bite the bullet","Spill the beans","Barking up the wrong tree","Pull someone's leg"],answer:"Spill the beans"},
+{Question:`What tone does the following sentence convey?
+“Well, that is just fantastic,” she muttered, staring at her ruined project.`,options:["Joyful","Sarcastic","Confident","Indifferent"],answer:"Sarcastic"},
+{Question:"The word 'obsequious' refers to someone who is:",options:["Disobedeint","EXtremely obedient","Angry","Smart"],answer:"Extremely Obedient"},
+{Question:"Which sentence contains an error in subject-verb agreement?",options:["Each of the players runs fast.","The committee has made its decision."," Neither of the options are good"," The dog with the puppies is barking"],answer:" Neither of the options are good"},
+{Question:`Choose the word that means “harsh in tone or manner”:`,options:["Acrimonious","Placid","Mellow","Jovial"],answer:"Acrimonious"},
+{Question:`His obfuscating explanations only made the topic harder to understand. What does "obfuscating" mean?`,options:["Clarifying","Simplifying","Confusing","Strengthening"],answer:"Confusing"},
+{Question:"Choose the correct synonym of 'nefarious':",options:["Kind","Evil","Silly","Lazy"],answer:"Evil"}];
 
 
 btn.addEventListener("click",(e)=>{
@@ -82,7 +84,7 @@ const updateQuestion=(i)=>{
         console.log("user's score is ", userScore);
         if(userScore>highScore){
             highScore=userScore;
-        localStorage.setItem("mathHighest",JSON.stringify(userScore));
+        localStorage.setItem("engHighest",JSON.stringify(userScore));
           highScoreDisplay.innerText=`👑Highest Score:${highScore}`;
         }
 
@@ -161,9 +163,9 @@ timeoutId=setTimeout(() => {
 }, 60000);
  }
 
-         window.addEventListener("load",(e)=>{
-            let loginPass=localStorage.getItem("loginId");
-            if(loginPass!="true"){
-                window.location.href="login.html";
-            }
+     window.addEventListener("load",(e)=>{
+       let loginPass=localStorage.getItem("loginId");
+        if(loginPass!="true"){
+              window.location.href="login.html";
+          }
         });

@@ -20,7 +20,7 @@ let highScoreDisplay=document.querySelector(".highScore");
 
 
 
-let highScore=JSON.parse(localStorage.getItem("mathHighest"))||"0";
+let highScore=JSON.parse(localStorage.getItem("scienceHigest"))||"0";
   highScoreDisplay.innerText=`👑Highest Score:${highScore}`;
 
   
@@ -39,16 +39,59 @@ startBtn.addEventListener("click",(e)=>{
 
 
 
-let questions=[{Question:"A train travels 60 km in 1 hour. How far will it travel in 3.5 hours ?",options:["180 km", "210 km" ,"240 km", "200 km"], answer:"210 km"},
-{Question:"Triangle angles are in the ration of 2:3:4. Find all the angles.",options:["40°,60°,80°","30°,60°,90°","20°,40°,120°","45°,45°,90°"],answer:"40°,60°,80°"},
-{Question:"If A and B are events with P(A) = 0.5 and P(B) = 0.7, and they are independent, what is P(A ∩ B)?",options:["0.2","1.2","0.35","0.5"],answer:"0.35"},
-{Question:"Number of zeros at the end of 100!",options:["20","24","22","25"],answer:"24"},
-{Question:" If John's age is twice that of his sister and the sum of their ages is 36, what is John's age?",options:["10","24","18","20"],answer:"24"},
-{Question:"A man walks 10 km south, then 10 km west, then 10 km north. How far is he from the starting point?",options:["10 Km","30 Km","20 Km","0 Km"],answer:"10 Km"},
-{Question:" Which number is one-fourth of one-third of one-half of 240?",options:["20","10","30","40"],answer:"10"},
-{Question:"Which shape has the most number of lines of symmetry?",options:["Rectangle","Square","Equilateral Triangle","Circle"],answer:"Circle"},
-{Question:"If Today is Monday, what day will it be after 45 days ?",options:["Wednesday","Thursday","Saturday","Sunday"],answer:"Thursday"},
-{Question:" If all squares are rectangles, and all rectangles are quadrilaterals, then all squares are:",options:["Circles","Quadrilaterals","Rhombuses","Parallelograms"],answer:"Quadrilaterals"}];
+let questions = [
+  {
+    Question: "What is the Heisenberg Uncertainty Principle primarily related to?",
+    options: ["Time and Energy", "Mass and Volume", "Position and Momentum", "Speed and Acceleration"],
+    answer: "Position and Momentum"
+  },
+  {
+    Question: "Which law states that energy cannot be created or destroyed?",
+    options: ["Law of Conservation of Mass", "First Law of Thermodynamics", "Newton's First Law", "Ohm's Law"],
+    answer: "First Law of Thermodynamics"
+  },
+  {
+    Question: "What type of bond involves the sharing of electron pairs between atoms?",
+    options: ["Ionic bond", "Hydrogen bond", "Covalent bond", "Metallic bond"],
+    answer: "Covalent bond"
+  },
+  {
+    Question: "What is the SI unit of capacitance?",
+    options: ["Ohm", "Farad", "Tesla", "Henry"],
+    answer: "Farad"
+  },
+  {
+    Question: "What is the half-life of a radioactive isotope?",
+    options: ["Time for half the sample to evaporate", "Time to convert to stable form", "Time for half the nuclei to decay", "Time taken to double in size"],
+    answer: "Time for half the nuclei to decay"
+  },
+  {
+    Question: "Which phenomenon explains the bending of light as it passes from one medium to another?",
+    options: ["Reflection", "Refraction", "Dispersion", "Interference"],
+    answer: "Refraction"
+  },
+  {
+    Question: "Which organelle is involved in detoxification and lipid synthesis?",
+    options: ["Golgi apparatus", "Smooth endoplasmic reticulum", "Nucleus", "Ribosome"],
+    answer: "Smooth endoplasmic reticulum"
+  },
+  {
+    Question: "Which nuclear reaction occurs in the Sun’s core?",
+    options: ["Fission", "Fusion", "Ionization", "Combustion"],
+    answer: "Fusion"
+  },
+  {
+    Question: "Which part of the electromagnetic spectrum has the shortest wavelength?",
+    options: ["Ultraviolet", "X-rays", "Gamma rays", "Infrared"],
+    answer: "Gamma rays"
+  },
+  {
+    Question: "What is Planck’s constant (approximate value)?",
+    options: ["6.626×10⁻³⁴ Js", "3.14×10⁸ m/s", "9.8 m/s²", "1.6×10⁻¹⁹ C"],
+    answer: "6.626×10⁻³⁴ Js"
+  }
+];
+
 
 
 btn.addEventListener("click",(e)=>{
@@ -82,7 +125,7 @@ const updateQuestion=(i)=>{
         console.log("user's score is ", userScore);
         if(userScore>highScore){
             highScore=userScore;
-        localStorage.setItem("mathHighest",JSON.stringify(userScore));
+        localStorage.setItem("scienceHighest",JSON.stringify(userScore));
           highScoreDisplay.innerText=`👑Highest Score:${highScore}`;
         }
 
